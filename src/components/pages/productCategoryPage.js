@@ -1,5 +1,5 @@
 import Menu from "../menu/menu";
-import ProductsList from "../productsList/productsList"
+import ProductsCategoryList from "../productsCategoryList/productsCategoryList"
 import Sorter from "../sorters/sorter";
 
 const ProductCategoryPage = () => {
@@ -9,7 +9,7 @@ const ProductCategoryPage = () => {
         <>
         <Menu></Menu>
         <Sorter></Sorter>
-        <ProductsList></ProductsList>
+        <ProductsCategoryList></ProductsCategoryList>
         </>
     )
 }

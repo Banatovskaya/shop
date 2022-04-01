@@ -5,7 +5,7 @@
       "title": "Product item 1",
       "link": "product1",
       "categoryLink": "/category",
-      "image": "",
+      "image": "img1.jpg",
       "price": "1200",
       "discount": 0,
       "characteristic": [
@@ -37,7 +37,7 @@
       "title": "Product item 2",
       "link": "product2",
       "categoryLink": "/category",
-      "image": "",
+      "image": "img2.jpg",
       "price": "1600",
       "discount": 10,
       "characteristic": [
@@ -69,7 +69,7 @@
       "title": "Long product name item 3",
       "link": "product3",
       "categoryLink": "/category",
-      "image": "",
+      "image": "img1.jpg",
       "price": "1600",
       "discount": 0,
       "characteristic": [
@@ -101,7 +101,7 @@
       "title": "Product item 4",
       "link": "product4",
       "categoryLink": "/category",
-      "image": "",
+      "image": "img1.jpg",
       "price": "1800",
       "discount": 0,
       "characteristic": [
@@ -133,7 +133,7 @@
       "title": "Product item 5",
       "link": "product5",
       "categoryLink": "/category",
-      "image": "",
+      "image": "img1.jpg",
       "price": "900",
       "discount": 50,
       "characteristic": [
@@ -165,7 +165,7 @@
       "title": "Product item 6",
       "link": "product6",
       "categoryLink": "/category",
-      "image": "",
+      "image": "img1.jpg",
       "price": "2500",
       "discount": 0,
       "characteristic": [
@@ -193,11 +193,11 @@
       "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lectus urna, pretium eget sapien vel, tincidunt dapibus libero. Sed elit diam, tincidunt a erat nec, finibus dictum nibh. Vivamus sed lorem id lectus <b>ullamcorper tincidunt</b>. Nunc erat nulla, posuere in velit id, suscipit commodo lorem. Morbi aliquam vitae arcu sit amet mollis.</p><p>Donec varius justo justo, id lacinia arcu lacinia sit amet. Nunc quis leo quis arcu consectetur euismod. Nunc volutpat tempus sem, id bibendum nibh blandit et. Aliquam in mi aliquam, varius sem et, rutrum enim. Sed lacinia elit vel elementum pharetra. Proin maximus orci vel odio viverra gravida. Quisque et augue sed purus interdum congue quis ac nibh.</p>"
     },
     {
-      "id": "7",
+      "id": "127",
       "title": "Product item 7",
       "link": "product7",
       "categoryLink": "/category",
-      "image": "",
+      "image": "img1.jpg",
       "price": "2000",
       "discount": 0,
       "characteristic": [
@@ -229,7 +229,7 @@
       "title": "Product item 8",
       "link": "product8",
       "categoryLink": "/category",
-      "image": "",
+      "image": "img3.jpg",
       "price": "1800",
       "discount": 0,
       "characteristic": [
@@ -261,7 +261,7 @@
       "title": "Product item 9",
       "link": "product9",
       "categoryLink": "/category",
-      "image": "",
+      "image": "img2.jpg",
       "price": "1800",
       "discount": 15,
       "characteristic": [

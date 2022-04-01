@@ -3,8 +3,8 @@ import './sorter.css';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createSelector } from 'reselect';
-import { productsSorted} from "../../actions/products";
-import ProductsList from '../productsList/productsList';
+import { productsSortedIncrease, productsSortedDecrease, productsSortedNone} from "../../actions/products";
+import ProductsList from '../productsCategoryList/productsCategoryList';
 
 
 const Sorter= () => {
@@ -33,25 +33,25 @@ const Sorter= () => {
         switch (classForSorting) {
             case clazz.sort:
                 setClassForSorting(clazz.downSort);
-                dispatch(productsSorted(productsList));
+                dispatch(productsSortedIncrease());
                 break;
             case clazz.downSort:
                 setClassForSorting(clazz.uppSort);
-                dispatch(productsSorted(productsList));
+                dispatch(productsSortedDecrease());
                 break;
             case clazz.uppSort:
                 setClassForSorting(clazz.sort);
-                dispatch(productsSorted(productsList));
+                dispatch(productsSortedNone());
                 break;
             default:
                 setClassForSorting(clazz.sort);
-                dispatch(productsSorted(productsList));
+                dispatch(productsSortedNone());
         }
     }
     return (
         <>
     <Button className={classForSorting} onClick={changeSortButton} style={{'fontSize': '1.5em','height': '50px', 'width': '120px'}} /> 
-    <ProductsList></ProductsList>
+
         </>
     
 

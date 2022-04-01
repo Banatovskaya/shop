@@ -3,12 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createSelector } from 'reselect';
 import { useEffect } from "react";
 import { fetchProducts} from "../../actions/products";
-import ProductsItem from "../productsItem/productsItem";
+import ProductsCategoryListItem from "../productsCategoryListItem/productsCategoryListItem";
+import './productCategoryList.css';
+
 
 const ProductsList = () => {
 
     const productsListSelector = createSelector(
-        (state) => state.products.sortedProducts,//sortedProducts changed
+        (state) => state.products.sortedProducts,
         (sortedProducts) => {
          console.log('create selector')  
             return sortedProducts;
@@ -38,16 +40,20 @@ const ProductsList = () => {
         if (arr.length === 0) {
             return <h5 className="text-center mt-5">Товаров нет</h5>
         }
+
         return arr.map(({id, ...props}) => {
-            return <ProductsItem key={id} {...props} id={id} />
+            return (
+                        <ProductsCategoryListItem key={id} {...props} id={id} />
+                    )
+           
         })
     }
 
     const elements = renderProductList(productsList)
-    console.log("elem",elements)
 
     return (
-        <ul>
+        <ul className="listItem_wrap">
+           
             {elements}
         </ul>
     )

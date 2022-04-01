@@ -24,16 +24,28 @@ export const productsFetchingError = () => {
     }
 }
 
-export const productsSorted = (arr) => {
-    
-    // a.sort((a,b)=>{return a.price-b.price})
-    // const a = (JSON.parse(JSON.stringify(arr))).sort((a,b)=>{return a.price-b.price})
-    
-
-    // console.log(a)
+export const productsSortedIncrease = () => {
     return {
-        type: 'PRODUCTS_SORTED',
-        payload: (JSON.parse(JSON.stringify(arr))).sort((a,b)=>{return a.price-b.price})
+        type: 'PRODUCTS_SORTED_INCREASE',
+    }
+}
+
+export const productsSortedDecrease = () => {
+    return {
+        type: 'PRODUCTS_SORTED_DECREASE',
+    }
+}
+
+export const productsSortedNone = () => {
+    return {
+        type: 'PRODUCTS_SORTED_NONE',
+    }
+}
+
+export const registeredIdCurrentProduct = (id) => {
+    return {
+        type: 'REGISTERED_ID_CURRENT_PRODUCT',
+        payload: id
     }
 }
 

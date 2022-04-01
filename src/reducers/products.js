@@ -2,6 +2,7 @@ const initialState = {
     products: [],
     productsLoadingStatus: 'adle',
     sortedProducts: [],
+    idCurrentProduct: []
 }
 
 const products = (state = initialState, action) => {
@@ -23,11 +24,29 @@ const products = (state = initialState, action) => {
                 ...state,
                 productsLoadingStatus: 'error'
             }
-        case 'PRODUCTS_SORTED':
+        case 'PRODUCTS_SORTED_INCREASE':
             return {
                 ...state,
-                sortedProducts: action.payload
+                sortedProducts: (JSON.parse(JSON.stringify(state.products))).sort((a,b)=>{return a.price-b.price})
+            }   
+            
+        case 'PRODUCTS_SORTED_DECREASE':
+            return {
+                ...state,
+                sortedProducts: (JSON.parse(JSON.stringify(state.products))).sort((a,b)=>{return b.price-a.price})
+            }  
+        
+        case 'PRODUCTS_SORTED_NONE':
+            return {
+                ...state,
+                sortedProducts: state.products
             }    
+    
+        case 'REGISTERED_ID_CURRENT_PRODUCT':
+            return{
+                ...state,
+                idCurrentProduct: action.payload
+            }
 
         default: return state
     }
