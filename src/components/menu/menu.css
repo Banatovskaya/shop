@@ -1,15 +1,15 @@
 .menu_wrap{
     display: flex;
     position: relative;
-    margin: 20px;
+    margin: 30px;
 }
 
 .menu_item {
     margin-top: 50px;
-    margin-right: 20px;
+    margin-right: 80px;
     text-decoration:none;
     color:#326fd1;
-    font-size: 21px;
+    font-size: 26px;
 }
 
 .logo {

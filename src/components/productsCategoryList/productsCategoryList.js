@@ -25,7 +25,7 @@ const ProductsList = () => {
 
 
     useEffect(() => {
-        dispatch(fetchProducts(request))
+        dispatch(fetchProducts(request));
       
     }, []);
     

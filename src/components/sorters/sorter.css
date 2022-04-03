@@ -1,4 +1,17 @@
-/* .sort { */
-    /* background: #6366F1;
-    color: white;
-} */
+.sorter_wrap { 
+    display: flex;
+  justify-content: end;
+  padding-right: 100px;
+  padding-left: 40px;
+}
+
+.button_sorter {
+    left: 20px;
+}
+
+.text_sorter {
+    display: inline;
+    color: #326fd1;
+    font-weight: bold;
+    font-size: 20px;
+}

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createSelector } from 'reselect';
 import { productsSortedIncrease, productsSortedDecrease, productsSortedNone} from "../../actions/products";
-import ProductsList from '../productsCategoryList/productsCategoryList';
+// import ProductsList from '../productsCategoryList/productsCategoryList';
 
 
 const Sorter= () => {
@@ -14,14 +14,14 @@ const Sorter= () => {
         uppSort: 'pi pi-sort-numeric-up-alt sort'
     }
 
-    const productsListSelector = createSelector(
-        (state) => state.products.products,
-        (products) => {
-            return products;
-        }
-    )
+    // const productsListSelector = createSelector(
+    //     (state) => state.products.products,
+    //     (products) => {
+    //         return products;
+    //     }
+    // )
 
-    const productsList = useSelector(productsListSelector);
+    // const productsList = useSelector(productsListSelector);
     const [classForSorting, setClassForSorting] = useState(clazz.sort)
 
     //     increase
@@ -49,15 +49,17 @@ const Sorter= () => {
         }
     }
     return (
-        <>
-    <Button className={classForSorting} onClick={changeSortButton} style={{'fontSize': '1.5em','height': '50px', 'width': '120px'}} /> 
+        <div className='sorter_wrap'>
+            <div className="text_sorter">сортировать по цене</div>
+            <Button className={`${classForSorting} button_sorter`} onClick={changeSortButton} style={{'fontSize': '1.5em','height': '50px', 'width': '120px'}} /> 
+        </div>
+  
+   
 
-        </>
-    
 
 
     )
-    }
+}
 
 export default Sorter
 

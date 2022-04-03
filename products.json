@@ -69,7 +69,7 @@
       "title": "Long product name item 3",
       "link": "product3",
       "categoryLink": "/category",
-      "image": "img1.jpg",
+      "image": "img3.jpg",
       "price": "1600",
       "discount": 0,
       "characteristic": [
@@ -165,7 +165,7 @@
       "title": "Product item 6",
       "link": "product6",
       "categoryLink": "/category",
-      "image": "img1.jpg",
+      "image": "img2.jpg",
       "price": "2500",
       "discount": 0,
       "characteristic": [

@@ -16,7 +16,7 @@ const products = (state = initialState, action) => {
             return {
                 ...state,
                 products: action.payload,
-                sortedProducts: action.payload,
+                sortedProducts: action.payload.filter(item => item.categoryLink === '/category'),
                 productsLoadingStatus: 'idle'
             }
         case 'PRODUCTS_FETCHING_ERROR':
