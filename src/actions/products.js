@@ -42,10 +42,17 @@ export const productsSortedNone = () => {
     }
 }
 
-export const registeredIdCurrentProduct = (id) => {
+export const idCurrentProduct = (id) => {
     return {
-        type: 'REGISTERED_ID_CURRENT_PRODUCT',
+        type: 'ID_CURRENT_PRODUCT',
         payload: id
+    }
+}
+
+export const currentButtonSortClass = (buttonSortClass) => {
+    return {
+        type: 'CURRENT_BUTTON_SORT_CLASS',
+        payload: buttonSortClass
     }
 }
 

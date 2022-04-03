@@ -2,7 +2,8 @@ const initialState = {
     products: [],
     productsLoadingStatus: 'adle',
     sortedProducts: [],
-    idCurrentProduct: []
+    idCurrentProduct: [],
+    currentButtonSortClass: 'pi pi-sort-alt sort'
 }
 
 const products = (state = initialState, action) => {
@@ -42,11 +43,18 @@ const products = (state = initialState, action) => {
                 sortedProducts: state.products
             }    
     
-        case 'REGISTERED_ID_CURRENT_PRODUCT':
-            return{
+        case 'ID_CURRENT_PRODUCT':
+            return {
                 ...state,
                 idCurrentProduct: action.payload
             }
+
+        case 'CURRENT_BUTTON_SORT_CLASS':
+            return {
+                ...state,
+                currentButtonSortClass: action.payload
+            }
+
 
         default: return state
     }

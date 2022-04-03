@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import {registeredIdCurrentProduct} from "../../actions/products";
+import {idCurrentProduct} from "../../actions/products";
 import {useDispatch} from 'react-redux';
 import './productCategoryListItem.css'
 
@@ -9,7 +9,7 @@ const ProductsCategoryListItem = ({title, link,categoryLink, image, price, chara
     
     
     const registrProductId = () => {
-       dispatch(registeredIdCurrentProduct(id))
+       dispatch(idCurrentProduct(id))
     }
 
 
@@ -35,5 +35,4 @@ const ProductsCategoryListItem = ({title, link,categoryLink, image, price, chara
 
 export default ProductsCategoryListItem;
 
-//title, Link,categoryLink, image, price, characteristic,discount, id, text
 
