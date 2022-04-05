@@ -7,7 +7,7 @@ const HomePage = () => {
         <>
         <Menu></Menu>
         <Carusel></Carusel>
-        {/* <AdvertisingList/> */}
+        <AdvertisingList/>
         </>
     )
 }

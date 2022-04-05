@@ -1,16 +1,14 @@
 
 import { useState } from 'react';
+import renderProducts from '../../servises/renderProducts';
 import {useSelector } from 'react-redux';
 import { createSelector } from 'reselect';
-import ProductsCategoryListItem from "../productsCategoryListItem/productsCategoryListItem";
 import './productCategoryList.css';
 import { Button } from 'primereact/button';
 
 const ProductsList = () => {
-    const itemDefaultnumber = 6;
 
-    const [loadingCounter, setLoadingCounter] = useState(0)
-    console.log(loadingCounter)
+    const [loadingCounter, setLoadingCounter] = useState(1);
     const productsListSelector = createSelector(
         (state) => state.products.sortedProducts,
         (sortedProducts) => {
@@ -27,33 +25,31 @@ const ProductsList = () => {
     } else if (productsLoadingStatus === 'error'){
         return <h1 >Ошибка загрузки</h1>
     }
-   
-    const renderProductList = (arr, itemDefaultnumber) => {
-        if (arr.length === 0) {
-            return <h5 className="text-center mt-5">Товаров нет</h5>
-        }
+    const renderProductList = renderProducts() 
+    // const renderProductList = (arr, itemDefaultnumber, firstItem) => {
+    //     if (arr.length === 0) {
+    //         return <h5 className="text-center mt-5">Товаров нет</h5>
+    //     }
 
-        // return arr.map(({id, ...props}) => {
-        //     return (
-        //                 <ProductsCategoryListItem key={id} {...props} id={id} />
-        //             )
-        // })
+    //     // return arr.map(({id, ...props}) => {
+    //     //     return (
+    //     //                 <ProductsCategoryListItem key={id} {...props} id={id} />
+    //     //             )
+    //     // })
       
-        let newArr=[];
-        for (let i=0; (i < (itemDefaultnumber * (loadingCounter+1))&&(i<arr.length)); i++) {
-            const {id, ...props} = arr[i];
-             newArr.push(<ProductsCategoryListItem key={id} {...props} id={id} />)
-        }
-        return newArr
-    }
+    //     let newArr=[];
+    //     for (let i=firstItem; (i < (itemDefaultnumber * (loadingCounter+1))&&(i<arr.length)); i++) {
+    //         const {id, ...props} = arr[i];
+    //          newArr.push(<ProductsCategoryListItem key={id} {...props} id={id} />)
+    //     }
+    //     return newArr
+    // }
 
     const addItems=()=>{
         setLoadingCounter(loadingCounter+1)
-        console.log(loadingCounter)
-        return (<h1>dd</h1>)
     }
 
-    const elements = renderProductList(productsList, 6)
+    const elements = renderProductList(productsList, 6*loadingCounter, 0)
 
     return (
         <>
