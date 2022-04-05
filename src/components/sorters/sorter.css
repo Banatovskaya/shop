@@ -1,8 +1,8 @@
 .sorter_wrap { 
     display: flex;
-  justify-content: end;
-  padding-right: 100px;
-  padding-left: 40px;
+    justify-content: center;
+    padding-right: 100px;
+    padding-left: 40px;
 }
 
 .button_sorter {

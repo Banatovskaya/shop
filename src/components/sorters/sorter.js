@@ -27,7 +27,6 @@ const Sorter= () => {
             case clazz.sort:
                 dispatch(productsSortedIncrease());
                 dispatch(currentButtonSortClass(clazz.downSort))
-
                 break;
             case clazz.downSort:
                 dispatch(productsSortedDecrease());
