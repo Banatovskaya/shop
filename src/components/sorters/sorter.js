@@ -45,7 +45,7 @@ const Sorter= () => {
     return (
         <div className='sorter_wrap'>
             <div className="text_sorter">сортировать по цене</div>
-            <Button className={`${classForSorting} button_sorter`} onClick={changeSortButton} style={{'fontSize': '1.5em','height': '50px', 'width': '120px'}} /> 
+            <Button className={`${classForSorting} button_sorter`} onClick={changeSortButton} style={{'fontSize': '1.2em','height': '40px', 'width': '100px', 'paddingLeft':'30px'}} /> 
         </div> 
     )
 }

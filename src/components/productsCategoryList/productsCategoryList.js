@@ -36,7 +36,7 @@ const ProductsList = () => {
             {elements}
         </ul>
         <div className='list_load_wrap'>
-            <Button className='button_load' style={{'fontSize': '1.5em','height': '50px', 'width': '120px', 'display': 'block'}} onClick={()=>{addItems()}}>load</Button>
+            <Button className='button_load' style={{'fontSize': '1.1em','height': '30px', 'width': '100px', 'display': 'block', 'paddingBottom':'30px'}} onClick={()=>{addItems()}}>load</Button>
         </div>
         </>
     )

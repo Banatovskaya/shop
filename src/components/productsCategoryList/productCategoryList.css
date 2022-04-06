@@ -1,9 +1,15 @@
 .listItem_wrap {
-    padding: 20px;
+    padding: 20px 100px 20px 20px;
 }
 
 .list_load_wrap {
     display: flex;
     justify-content: center;
     padding: 0px 30px 50px 60px;
+}
+
+@media screen and (max-width: 768px ){
+    .listItem_wrap {
+        padding: 20px 20px 20px 20px;
+    }
 }
