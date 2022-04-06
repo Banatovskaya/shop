@@ -1,7 +1,7 @@
 export const fetchProducts = (request) => (dispatch) => {
     dispatch(productsFetching());
     // request("http://localhost:3001/productList")
-    request("https://shopapptest.herokuapp.com/")
+    request("https://shopapptest.herokuapp.com")
         .then(data => {dispatch(productsFetched(data))})
         .catch(() => dispatch(productsFetchingError()))
 }
