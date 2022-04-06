@@ -4,12 +4,12 @@ import {useDispatch} from 'react-redux';
 import './productCategoryListItem.css'
 import { Button } from 'primereact/button';
 
-const ProductsCategoryListItem = ({title, link,categoryLink, image, price, characteristic,discount, id, text}) => {
+const ProductsCategoryListItem = ({title, image, price, id}) => {
 
-    const dispatch = useDispatch();
-    const registrProductId = () => {
-       dispatch(idCurrentProduct(id))
-    }
+   const dispatch = useDispatch();
+   const registrProductId = () => {
+   dispatch(idCurrentProduct(id))
+}
 
    return (
          <>
@@ -28,7 +28,6 @@ const ProductsCategoryListItem = ({title, link,categoryLink, image, price, chara
                   <Button icon="pi pi-shopping-cart" label="Купить"></Button>
                   </Link>  
                </div>
-               
             </div>
          </>    
    );

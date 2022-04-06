@@ -12,7 +12,7 @@ export const useHttp = () => {
             return data;
         } catch (e) {
             throw e;
-        }
+            }
     }, []);
 
     return request

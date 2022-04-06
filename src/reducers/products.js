@@ -13,6 +13,7 @@ const products = (state = initialState, action) => {
                 ...state,
                 productsLoadingStatus: 'loading'
             }
+
         case 'PRODUCTS_FETCHED':
             return {
                 ...state,
@@ -20,11 +21,13 @@ const products = (state = initialState, action) => {
                 sortedProducts: action.payload.filter(item => item.categoryLink === '/category'),
                 productsLoadingStatus: 'idle'
             }
+
         case 'PRODUCTS_FETCHING_ERROR':
             return {
                 ...state,
                 productsLoadingStatus: 'error'
             }
+
         case 'PRODUCTS_SORTED_INCREASE':
             return {
                 ...state,
@@ -54,7 +57,6 @@ const products = (state = initialState, action) => {
                 ...state,
                 currentButtonSortClass: action.payload
             }
-
 
         default: return state
     }

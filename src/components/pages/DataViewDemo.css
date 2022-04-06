@@ -97,7 +97,6 @@
         padding-left: 0;
         padding-right: 0;
     }
-    
 }
 
 @media screen and (max-width: 576px) {
@@ -132,6 +131,7 @@
         align-items: center;
         width: 100%;
     }
+    
     .dataview-demo .product-grid-item img {
         width: 45%;
     }

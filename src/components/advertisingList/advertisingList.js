@@ -25,13 +25,10 @@ const AdvertisingList = () => {
     const elements = renderProductList(productsList, productsList.length, productsList.length-4)
 
     return (
-        
         <div className="advertising_wrap">
             {elements}
         </div>
-       
     )
-
 }
 
 export default AdvertisingList;

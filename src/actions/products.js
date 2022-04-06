@@ -20,7 +20,6 @@ export const productsFetched = (products) => {
 export const productsFetchingError = () => {
     return {
         type: 'PRODUCTS_FETCHING_ERROR'
-        
     }
 }
 
@@ -55,8 +54,3 @@ export const currentButtonSortClass = (buttonSortClass) => {
         payload: buttonSortClass
     }
 }
-
-// GET /:entity[?param1=...&param2=...] — списочный get
-
-// Простой случай: в случае успеха сервер возвращает 200 OK 
-// с массивом объектов в формате JSON в теле ответа (т.е. ответ начинается с [ и заканчивается ]).

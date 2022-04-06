@@ -3,7 +3,6 @@ import ProductsCategoryList from "../productsCategoryList/productsCategoryList"
 import Sorter from "../sorters/sorter";
 
 const ProductCategoryPage = () => {
-
     
     return (
         <>

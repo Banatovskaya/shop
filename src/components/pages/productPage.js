@@ -8,13 +8,26 @@ const ProductPage = () => {
     const CurrentProductSelector = createSelector(
         (state) => state.products.idCurrentProduct,
         (state) => state.products.products,
-        (idCurrentProduct, products1) => {
-          return products1.filter(item => item.id === idCurrentProduct)
+        (idCurrentProduct, products) => {
+          return products.filter(item => item.id === idCurrentProduct)
         }
     )
 
     const el = useSelector(CurrentProductSelector);
     const element = el[0];
+    
+    const characteristic = (arr, num) => {
+        let i = 0;
+        return arr.map((el) => {
+            while (i < num) {
+                i++;
+                return (
+                    <div key={i} className="product-description">{el.title}: {el.value} {el.postfix}</div>
+                )
+            }
+        })
+    }
+    
     return (
             <div className="col-12 md:col-4 dataview-demo">
             <div className="product-grid-item card">
@@ -30,18 +43,13 @@ const ProductPage = () => {
                 <div className="product-grid-item-bottom">
                     <span className="product-price">{element.price} грн</span>
                     <Button icon="pi pi-shopping-cart" label="Купить"></Button>
-            
                 </div>
-                <div className="product-description">{element.characteristic[0].title}: {element.characteristic[0].value} {element.characteristic[0].postfix}</div>
-                <div className="product-description">{element.characteristic[1].title}: {element.characteristic[1].value} {element.characteristic[1].postfix}</div>
-                <div className="product-description">{element.characteristic[2].title}: {element.characteristic[2].value} {element.characteristic[2].postfix}</div>
+                {characteristic(element.characteristic, 3)}
                 <div className="product-description" dangerouslySetInnerHTML={{__html: element.text}}></div>
-                <div className="product-description">{element.characteristic[0].title}: {element.characteristic[0].value} {element.characteristic[0].postfix}</div>
-                <div className="product-description">{element.characteristic[1].title}: {element.characteristic[1].value} {element.characteristic[1].postfix}</div>
-                <div className="product-description">{element.characteristic[2].title}: {element.characteristic[2].value} {element.characteristic[2].postfix}</div>
-                <div className="product-description">{element.characteristic[3].title}: {element.characteristic[3].value} {element.characteristic[3].postfix}</div>
+                {characteristic(element.characteristic, 4)}
             </div>
        </div>
  );
 }
+
 export default ProductPage
