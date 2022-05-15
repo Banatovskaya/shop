@@ -50,3 +50,9 @@
         overflow: hidden;
     }
 }
+
+@media (max-width: 442px) {
+    .carusel {
+        display: none;
+    }
+}

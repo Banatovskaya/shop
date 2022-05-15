@@ -1,8 +1,6 @@
 .sorter_wrap { 
     display: flex;
     justify-content: center;
-    padding-right: 100px;
-    padding-left: 40px;
 }
 
 .button_sorter {
@@ -11,7 +9,24 @@
 
 .text_sorter {
     display: inline;
-    color: #326fd1;
+    color: #6366F1;
     font-weight: bold;
     font-size: 20px;
+}
+
+@media screen and (max-width: 575px ){
+
+    .sorter_wrap { 
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .text_sorter {
+        font-size: 16px;\margin-bottom: 10px;
+    }
+
+    .button_sorter {
+        left: 0px;
+    }
+    
 }

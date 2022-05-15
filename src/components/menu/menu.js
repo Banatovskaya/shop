@@ -42,8 +42,12 @@ const  UsersMenu = () => {
                 </div>  
                 <nav>
                     <div className={mobileMenuClass}>
-                        <NavLink className="menu_item" style={({isActive}) => changeActive(isActive)} to="/">главная</NavLink>
-                        <NavLink className="menu_item" style={({isActive}) => changeActive(isActive)} to="/category">категория товара</NavLink>
+                        <div className="menu_item" >
+                            <NavLink style={({isActive}) => changeActive(isActive)} to="/">главная</NavLink>
+                        </div>
+                        <div className="menu_item">
+                            <NavLink  style={({isActive}) => changeActive(isActive)} to="/category">категория товара</NavLink>
+                        </div>
                     </div>  
                 </nav>
         </div>

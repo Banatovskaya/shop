@@ -1,15 +1,19 @@
 .menu_wrap{
     display: flex;
     position: relative;
-    margin: 30px;
+    padding: 30px;
 }
 
 .menu_item {
+    display: inline;
     margin-top: 50px;
     margin-right: 80px;
     text-decoration:none;
     color:#326fd1;
     font-size: 24px;
+}
+.menu_item a {
+    color:#326fd1;
 }
 
 .logo {
@@ -79,7 +83,6 @@
         content: " ";
         position: absolute;
         top: 16px;
-        /* display: none; */
         width: 30px;
         height: 3px;
         background-color: #326fd1;
@@ -109,4 +112,20 @@
         background-color: #326fd1;
         transform: rotate(90deg);
     }
+
+    @media (max-width: 382px) {
+
+        .mobileMenuOpen{
+            align-items: flex-end;
+        }
+        .menu_item {
+            font-size: 20px;
+            padding: 10px 0px;
+            display: flex;
+        }
+        a {
+            text-align: right;
+        }
+    }
+
 }

@@ -7,6 +7,7 @@ import { Button } from 'primereact/button';
 
 const ProductsList = () => {
 
+    const numberOfItem = 6;
     const [loadingCounter, setLoadingCounter] = useState(1);
     const productsListSelector = createSelector(
         (state) => state.products.sortedProducts,
@@ -27,8 +28,11 @@ const ProductsList = () => {
     const addItems=()=>{
         setLoadingCounter(loadingCounter + 1)
     }
-
-    const elements = renderProductList(productsList, 6*loadingCounter, 0)
+    let display = "block";
+    const elements = renderProductList(productsList, numberOfItem*loadingCounter, 0)
+    if (numberOfItem*loadingCounter > productsList.length){
+        display = "none";
+    }
 
     return (
         <>
@@ -36,7 +40,7 @@ const ProductsList = () => {
             {elements}
         </ul>
         <div className='list_load_wrap'>
-            <Button className='button_load' style={{'fontSize': '1.1em','height': '30px', 'width': '100px', 'display': 'block', 'paddingBottom':'30px'}} onClick={()=>{addItems()}}>load</Button>
+            <Button className='button_load' style={{'fontSize': '1.1em', 'width': '100px', 'display': display, 'paddingTop':'10px'}} onClick={()=>{addItems()}}>load</Button>
         </div>
         </>
     )

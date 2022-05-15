@@ -35,7 +35,8 @@ const imgArrForCarusel = [{src:img1, type:'img'}, {src:img2, type:'img'}, {src:v
             )
         }
     }
-    const caruselItem = defineImgOrVideo()
+
+    const caruselItem = defineImgOrVideo();
 
     return (
         <div className="carusel">
