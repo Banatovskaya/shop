@@ -37,9 +37,7 @@
         display: flex;
         justify-content:space-between;
     }
-    .menu{
-        display: none;
-    }
+
 
     .mobileMenuOpen {
         display: flex;

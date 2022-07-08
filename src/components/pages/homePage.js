@@ -5,8 +5,8 @@ import AdvertisingList from "../advertisingList/advertisingList";
 const HomePage = () => {
     return (
         <>
-        <Menu></Menu>
-        <Carusel></Carusel>
+        <Menu/>
+        <Carusel/>
         <AdvertisingList/>
         </>
     )

@@ -8,6 +8,14 @@
     padding-bottom: 15px;
 }
 
+.button_load {
+    font-size: 1.1em;
+    width: 100px;
+    padding-top:10px;
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (max-width: 768px ){
     .listItem_wrap {
         padding: 20px 20px 0px 20px;

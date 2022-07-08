@@ -28,10 +28,10 @@ const ProductsList = () => {
     const addItems=()=>{
         setLoadingCounter(loadingCounter + 1)
     }
-    let display = "block";
+    let showButton = true;
     const elements = renderProductList(productsList, numberOfItem*loadingCounter, 0)
     if (numberOfItem*loadingCounter > productsList.length){
-        display = "none";
+        showButton = false;
     }
 
     return (
@@ -40,7 +40,7 @@ const ProductsList = () => {
             {elements}
         </ul>
         <div className='list_load_wrap'>
-            <Button className='button_load' style={{'fontSize': '1.1em', 'width': '100px', 'display': display, 'paddingTop':'10px'}} onClick={()=>{addItems()}}>load</Button>
+            {showButton && <Button className='button_load' onClick={()=>{addItems()}}>load</Button>}
         </div>
         </>
     )

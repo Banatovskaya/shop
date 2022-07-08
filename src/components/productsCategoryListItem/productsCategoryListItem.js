@@ -12,37 +12,35 @@ const ProductsCategoryListItem = ({title, image, price, id, discount}) => {
    }
 
    return (
-         <>
-            <div className="product_listItem_wrap">
-               <div className="product_listItem_img">
-                  <img src={`../images/${image}`} onError={(e) => e.target.src='https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={title} />
-               </div>
-               <div className="product_name" >
-                  <div >{title}</div>
-               </div>
-               
-
-               {discount>0? 
-                  <div>
-                     <div className="product_price-through">
-                        <span >{price} грн</span>
-                     </div>
-                     <div className="product_price-discount"> 
-                        <span >{discount>0? price - (discount*price/100) : null} грн
-                        </span>
-                     </div>
-                  </div>
-               :  <div className="product_price">
-                        <span >{price} грн</span>
-                  </div>} 
-
-               <div className="product_button">
-               <Link to={`/category/${id}`}  onClick={()=>registrProductId(id)}>
-                  <Button icon="pi pi-shopping-cart" label="Купить"></Button>
-                  </Link>  
-               </div>
+      <Link to={`/category/${id}`}  onClick={()=>registrProductId(id)}>
+         <div className="product_listItem_wrap">
+            <div className="product_listItem_img">
+               <img src={`../images/${image}`} onError={(e) => e.target.src='https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'} alt={title} />
             </div>
-         </>    
+            <div className="product_name" >
+               <div >{title}</div>
+            </div>
+
+            {discount > 0 ? 
+               <div>
+                  <div className="product_price-through">
+                     <span >{price} грн</span>
+                  </div>
+                  <div className="product_price-discount"> 
+                     <span >{discount>0? price - (discount*price/100) : null} грн
+                     </span>
+                  </div>
+               </div>
+            :  <div className="product_price">
+                     <span >{price} грн</span>
+               </div>
+            } 
+
+            <div className="product_button">
+               <Button icon="pi pi-shopping-cart" label="Купить"></Button>
+            </div>
+         </div>
+      </Link>  
    );
 }
 

@@ -5,51 +5,39 @@ import { useState } from "react";
 
 const  UsersMenu = () => {
 
-    const [hamburgerClass, setHamburgerClass] = useState('hamburger');
-    const [mobileMenuClass, setMobileMenuClass] = useState('menu');
+    const [menuState, setMenuState] = useState('close');
 
     const changeActive = (isActive)=>{
         if (isActive) {
             return {fontWeight: 'bold'}
             } 
     };
-
-    const changeHamburgerClass = () =>{
-        if (hamburgerClass === 'hamburger') {
-            setHamburgerClass('crossHamburger')
-        }
-         else setHamburgerClass('hamburger')
-    };
-
-    const changeMobileMenu = () => {
-        if (mobileMenuClass === 'menu') {
-            setMobileMenuClass('mobileMenuOpen')
-        } else setMobileMenuClass('menu')
-    };
-
     const clickHamburger = () => {
-         changeMobileMenu();
-         changeHamburgerClass();
-    };
-    
+        if (menuState === 'open'){
+            setMenuState ('close')
+        } else setMenuState('open');
+   };
+   
     return (
-            <div className="menu_wrap">
-                <div className="logo">
-                    <img src={logo} alt="logo" />
-                </div>
-                <div className="hamburger_wrap" onClick={()=>clickHamburger()}>
-                    <div className={hamburgerClass}></div>
-                </div>  
-                <nav>
-                    <div className={mobileMenuClass}>
-                        <div className="menu_item" >
-                            <NavLink style={({isActive}) => changeActive(isActive)} to="/">главная</NavLink>
-                        </div>
-                        <div className="menu_item">
-                            <NavLink  style={({isActive}) => changeActive(isActive)} to="/category">категория товара</NavLink>
-                        </div>
-                    </div>  
-                </nav>
+        <div className="menu_wrap">
+            <div className="logo">
+                <img src={logo} alt="logo" />
+            </div>
+            <div className="hamburger_wrap" onClick={()=>clickHamburger()}>
+                {menuState === 'open' ? <div className='crossHamburger'/> : <div className='hamburger'/>}
+
+            </div>  
+            <nav>
+                {menuState === 'open' ? <div className='mobileMenuOpen'> 
+                <div className="menu_item" >
+                        <NavLink style={({isActive}) => changeActive(isActive)} to="/">главная</NavLink>
+                    </div>
+                    <div className="menu_item">
+                        <NavLink  style={({isActive}) => changeActive(isActive)} to="/category">категория товара</NavLink>
+                    </div>
+                </div> 
+                : null  }
+            </nav>
         </div>
     )
 }
