@@ -17,10 +17,8 @@ const ProductPage = () => {
     const element = el[0];
     
     const characteristic = (arr, num) => {
-        // let i = 0;
         return arr.map((el,idx) => {
             while (idx < num) {
-                // i++;
                 return (
                     <div key={idx} className="product-description">{el.title}: {el.value} {el.postfix}</div>
                 )
