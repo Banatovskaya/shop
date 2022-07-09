@@ -23,7 +23,7 @@ const  UsersMenu = () => {
                     <NavLink style={({isActive}) => changeActive(isActive)} to="/">главная</NavLink>
                 </div>
                 <div className="menu_item">
-                    <NavLink  style={({isActive}) => changeActive(isActive)} to="/category">категория товара</NavLink>
+                    <NavLink  style={({isActive}) => changeActive(isActive)} to="/category/">категория товара</NavLink>
                 </div> 
             </>
         )
